@@ -1,0 +1,12 @@
+D:\CoreBlog\blog.entity\bin\Debug\net5.0\blog.entity.deps.json
+D:\CoreBlog\blog.entity\bin\Debug\net5.0\blog.entity.dll
+D:\CoreBlog\blog.entity\bin\Debug\net5.0\blog.entity.pdb
+D:\CoreBlog\blog.entity\obj\Debug\net5.0\blog.entity.csproj.AssemblyReference.cache
+D:\CoreBlog\blog.entity\obj\Debug\net5.0\blog.entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\CoreBlog\blog.entity\obj\Debug\net5.0\blog.entity.AssemblyInfoInputs.cache
+D:\CoreBlog\blog.entity\obj\Debug\net5.0\blog.entity.AssemblyInfo.cs
+D:\CoreBlog\blog.entity\obj\Debug\net5.0\blog.entity.csproj.CoreCompileInputs.cache
+D:\CoreBlog\blog.entity\obj\Debug\net5.0\blog.entity.dll
+D:\CoreBlog\blog.entity\obj\Debug\net5.0\refint\blog.entity.dll
+D:\CoreBlog\blog.entity\obj\Debug\net5.0\blog.entity.pdb
+D:\CoreBlog\blog.entity\obj\Debug\net5.0\ref\blog.entity.dll
