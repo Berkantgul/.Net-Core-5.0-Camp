@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\CoreBlog\\blog.entity\\blog.entity.csproj",
+      "projectUniqueName": "D:\\CoreBlog\\blog.entity\\blog.entity.csproj",
       "projectName": "blog.entity",
-      "projectPath": "d:\\CoreBlog\\blog.entity\\blog.entity.csproj",
+      "projectPath": "D:\\CoreBlog\\blog.entity\\blog.entity.csproj",
       "packagesPath": "C:\\Users\\BERKANT GÜL\\.nuget\\packages\\",
-      "outputPath": "d:\\CoreBlog\\blog.entity\\obj\\",
+      "outputPath": "D:\\CoreBlog\\blog.entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\BERKANT GÜL\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.307\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

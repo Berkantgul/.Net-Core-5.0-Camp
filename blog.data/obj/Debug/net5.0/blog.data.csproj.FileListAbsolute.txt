@@ -12,7 +12,7 @@ D:\CoreBlog\blog.data\obj\Debug\net5.0\blog.data.AssemblyInfo.cs
 D:\CoreBlog\blog.data\obj\Debug\net5.0\blog.data.csproj.CoreCompileInputs.cache
 D:\CoreBlog\blog.data\obj\Debug\net5.0\blog.data.csproj.CopyComplete
 D:\CoreBlog\blog.data\obj\Debug\net5.0\blog.data.dll
-D:\CoreBlog\blog.data\obj\Debug\net5.0\refint\blog.data.dll
 D:\CoreBlog\blog.data\obj\Debug\net5.0\blog.data.pdb
 D:\CoreBlog\blog.data\obj\Debug\net5.0\blog.data.genruntimeconfig.cache
 D:\CoreBlog\blog.data\obj\Debug\net5.0\ref\blog.data.dll
+D:\CoreBlog\blog.data\obj\Debug\net5.0\refint\blog.data.dll
