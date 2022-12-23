@@ -148,3 +148,8 @@ D:\CoreBlog\blog.webui\obj\Debug\net5.0\blog.webui.pdb
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\blog.webui.genruntimeconfig.cache
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Category\Index.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\refint\blog.webui.dll
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Blog\Index.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\_BlogLayout.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\_navbar.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\_header.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\_Footer.cshtml.g.cs
