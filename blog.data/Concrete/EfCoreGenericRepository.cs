@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using blog.data.Abstract;
 
@@ -21,6 +22,11 @@ namespace blog.data.Concrete
         public List<TEntity> GetAll()
         {
             return context.Set<TEntity>().ToList();
+        }
+
+        public List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter)
+        {
+            return context.Set<TEntity>().Where(filter).ToList();
         }
 
         public TEntity GetById(int id)

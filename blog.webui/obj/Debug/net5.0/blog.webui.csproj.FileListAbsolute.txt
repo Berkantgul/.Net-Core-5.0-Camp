@@ -153,3 +153,5 @@ D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\_BlogLayout.cshtml.g.
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\_navbar.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\_header.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\_Footer.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Blog\BlogDetail.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\Components\GetCommentByBlog\Default.cshtml.g.cs

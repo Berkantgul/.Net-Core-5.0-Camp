@@ -8,6 +8,7 @@ namespace blog.data.Abstract
 {
     public interface IBlogRepository : IRepository<Blog>
     {
-
+        List<Blog> GetBlogWithCategory();
+    
     }
 }

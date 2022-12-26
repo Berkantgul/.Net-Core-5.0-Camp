@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace blog.data.Abstract
@@ -12,5 +13,6 @@ namespace blog.data.Abstract
         void Delete(T entity);
         void Insert(T entity);
         T GetById(int id);
+        List<T> GetAll(Expression<Func<T, bool>> filter);
     }
 }
