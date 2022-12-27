@@ -20,6 +20,7 @@ namespace blog.webui.Controllers
         }
         public IActionResult BlogDetail(int id)
         {
+            ViewBag.id = id;
             var blogs = _blogManager.GetAll(id);
             return View(blogs);
         }

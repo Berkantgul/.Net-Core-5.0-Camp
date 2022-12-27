@@ -79,7 +79,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<a href="single.html" class="btn btn-primary read-m">Read More</a>
 					</div>
 
-					@await Component.InvokeAsync("GetCommentByBlog")
+					@await Component.InvokeAsync("GetCommentByBlog", new {id = ViewBag.id})
 					<div class="comment-top">
 						<h4>Leave a Comment</h4>
 						<div class="comment-bottom">
