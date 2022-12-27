@@ -45,6 +45,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <h3 class="tittle">Register Now</h3>
             <div class="inner-sec">
                 <div class="login p-5 bg-light mx-auto mw-100">
+
+
+
+
                     <form asp-controller="Register" asp-action="Index" method="post">
                         <div asp-validation-summary="All" class="text-danger"></div>
                         <div class="form-row">
@@ -72,11 +76,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
 
                         </div>
-                        <button type="submit" class="btn btn-primary submit mb-4">Kayıt Ol</button>
+                        <button type="submit" id="button1" class="btn btn-primary submit mb-4">Kayıt Ol</button>
                         <p>
-                            <a href="#" id="swal1">Kaydol'a tıklayarak, şartlarınızı kabul ediyorum</a>
+                            <a href="#" id="baska">Kaydol'a tıklayarak, şartlarınızı kabul ediyorum</a>
                         </p>
                     </form>
+
+
+
 
                 </div>
             </div>
@@ -109,11 +116,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--/ start-smoth-scrolling -->
     <script src="js/move-top.js"></script>
     <script src="js/easing.js"></script>
-    <script>
-        $("#swal1").click(function () {
-            swal("Mail adresinzi verdiğiniz takdirde güncel blog yazılarında bilgilendirmek amacıyla size spam'a dğşmeyecek şekilde düzenli olarak mail atımı sağlanacaktır.Eğer kabul ederseniz onaylayın.");
-        });
-    </script>
+
+
     <script>
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {
