@@ -86,6 +86,9 @@ namespace blog.data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("int");
+
                     b.Property<string>("BlogContent")
                         .HasColumnType("nvarchar(max)");
 
@@ -108,6 +111,8 @@ namespace blog.data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("BlogId");
+
+                    b.HasIndex("AuthorId");
 
                     b.HasIndex("CategoryId");
 
@@ -197,13 +202,39 @@ namespace blog.data.Migrations
                     b.ToTable("Contacts");
                 });
 
+            modelBuilder.Entity("blog.entity.Concrete.Newsletter", b =>
+                {
+                    b.Property<int>("MailId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Mail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("MailStatus")
+                        .HasColumnType("bit");
+
+                    b.HasKey("MailId");
+
+                    b.ToTable("Newsletters");
+                });
+
             modelBuilder.Entity("blog.entity.Concrete.Blog", b =>
                 {
+                    b.HasOne("blog.entity.Concrete.Author", "Author")
+                        .WithMany("Blogs")
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("blog.entity.Concrete.Category", "Category")
                         .WithMany("Blogs")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Author");
 
                     b.Navigation("Category");
                 });
@@ -217,6 +248,11 @@ namespace blog.data.Migrations
                         .IsRequired();
 
                     b.Navigation("Blog");
+                });
+
+            modelBuilder.Entity("blog.entity.Concrete.Author", b =>
+                {
+                    b.Navigation("Blogs");
                 });
 
             modelBuilder.Entity("blog.entity.Concrete.Blog", b =>

@@ -15,5 +15,6 @@ namespace blog.business.Abstract
         void AddBlog(Blog blog);
         List<Blog> GetBlogWithCategory();
         List<Blog> GetAll(int id);
+        List<Blog> GetAuthorPopularPost(int id);
     }
 }

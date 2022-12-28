@@ -10,6 +10,15 @@ namespace blog.data.Concrete
 {
     public class EfCoreBlogRepository : EfCoreGenericRepository<Blog>, IBlogRepository
     {
+        public List<Blog> GetAuthorPopularPost(int id)
+        {
+            using (BlogContext context = new BlogContext())
+            {
+                var blogs = context.Blogs.Where(i => i.AuthorId == id).OrderByDescending(i => i.BlogCreateDate).Take(2).ToList();
+                return blogs;
+            }
+        }
+
         public List<Blog> GetBlogWithCategory()
         {
             using (var context = new BlogContext())

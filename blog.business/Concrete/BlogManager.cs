@@ -35,6 +35,11 @@ namespace blog.business.Concrete
             return _blogRepository.GetAll();
         }
 
+        public List<Blog> GetAuthorPopularPost(int id)
+        {
+            return _blogRepository.GetAuthorPopularPost(id);
+        }
+
         public List<Blog> GetBlogWithCategory()
         {
             return _blogRepository.GetBlogWithCategory();

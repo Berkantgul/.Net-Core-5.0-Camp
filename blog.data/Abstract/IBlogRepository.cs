@@ -9,6 +9,7 @@ namespace blog.data.Abstract
     public interface IBlogRepository : IRepository<Blog>
     {
         List<Blog> GetBlogWithCategory();
+        List<Blog> GetAuthorPopularPost(int id);
     
     }
 }

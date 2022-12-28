@@ -16,5 +16,6 @@ namespace blog.entity.Concrete
         public string Password { get; set; }
         public string AuthorAbout { get; set; }
         public bool AuthorStatus { get; set; }
+        public List<Blog> Blogs { get; set; }
     }
 }
