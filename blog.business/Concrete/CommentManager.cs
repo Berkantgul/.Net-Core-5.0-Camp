@@ -18,7 +18,7 @@ namespace blog.business.Concrete
         }
         public void AddComment(Comment comment)
         {
-            throw new NotImplementedException();
+            _commentRepository.Insert(comment);
         }
 
         public void Delete(Comment comment)

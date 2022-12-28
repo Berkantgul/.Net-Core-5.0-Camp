@@ -15735,6 +15735,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\CoreBlog\\blog.webui\\Views\\ErrorPage\\Error404.cshtml",
+      "TargetPath": "Views\\ErrorPage\\Error404.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\CoreBlog\\blog.webui\\Views\\Shared\\Components\\GetCommentByBlog\\Default.cshtml",
       "TargetPath": "Views\\Shared\\Components\\GetCommentByBlog\\Default.cshtml",
       "FileKind": "mvc"
@@ -15752,6 +15757,11 @@
     {
       "FilePath": "d:\\CoreBlog\\blog.webui\\Views\\Shared\\_BlogLayout.cshtml",
       "TargetPath": "Views\\Shared\\_BlogLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\CoreBlog\\blog.webui\\Views\\Comment\\LeaveComment.cshtml",
+      "TargetPath": "Views\\Comment\\LeaveComment.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -1,0 +1,13 @@
+<div class="comment-top">
+    <h4>Bir yorum yazın</h4>
+    <div class="comment-bottom">
+        <form asp-controller="Comment" asp-action="LeaveComment" method="post">
+            <input type="hidden" name="id">
+            <input class="form-control" type="text" name="UserName" placeholder="Adınız" required="">
+            <input class="form-control" type="text" name="CommentTitle" placeholder="Başlık" required="">
+
+            <textarea class="form-control" name="CommentContent" placeholder="Message..." required=""></textarea>
+            <button type="submit" class="btn btn-primary submit">Submit</button>
+        </form>
+    </div>
+</div>
