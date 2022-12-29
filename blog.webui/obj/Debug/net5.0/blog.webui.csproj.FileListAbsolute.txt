@@ -161,3 +161,5 @@ D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\Components\GetBlogByA
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Newsletter\SubscribeMail.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Comment\LeaveComment.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\ErrorPage\Error404.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\About\Index.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\About\StayConnect.cshtml.g.cs
