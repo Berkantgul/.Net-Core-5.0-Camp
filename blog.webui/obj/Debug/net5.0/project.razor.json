@@ -15760,6 +15760,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\CoreBlog\\blog.webui\\Views\\Login\\Index.cshtml",
+      "TargetPath": "Views\\Login\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\CoreBlog\\blog.webui\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

@@ -7,6 +7,7 @@ using blog.business.Concrete;
 using blog.data.Abstract;
 using blog.data.Concrete;
 using blog.webui.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace blog.webui.Controllers
