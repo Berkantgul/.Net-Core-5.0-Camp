@@ -163,3 +163,4 @@ D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Comment\LeaveComment.cshtml.
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\ErrorPage\Error404.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\About\Index.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\About\StayConnect.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
