@@ -6,15 +6,15 @@ using blog.entity.Concrete;
 
 namespace blog.business.Abstract
 {
-    public interface IBlogService
+    public interface IBlogService : IGenericService<Blog>
     {
-        void UpdateBlog(Blog blog);
-        void DeleteBlog(Blog blog);
-        List<Blog> GetAllBlog();
-        Blog GetByIdBlog(int id);
-        void AddBlog(Blog blog);
+        // void UpdateBlog(Blog blog);
+        // void DeleteBlog(Blog blog);
+        // List<Blog> GetAllBlog();
+        // Blog GetByIdBlog(int id);
+        // void AddBlog(Blog blog);
         List<Blog> GetBlogWithCategory();
-        List<Blog> GetAll(int id);
+        // List<Blog> GetAll(int id);
         List<Blog> GetAuthorPopularPost(int id);
     }
 }

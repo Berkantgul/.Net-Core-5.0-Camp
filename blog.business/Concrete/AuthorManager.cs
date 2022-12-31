@@ -15,9 +15,31 @@ namespace blog.business.Concrete
         {
             _authorRepository = authorRepository;
         }
-        public void CreateAuthor(Author entity)
+
+        public void Add(Author entity)
         {
             _authorRepository.Insert(entity);
+        }
+
+
+        public void Delete(Author entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Author> GetAllList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Author GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Author entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

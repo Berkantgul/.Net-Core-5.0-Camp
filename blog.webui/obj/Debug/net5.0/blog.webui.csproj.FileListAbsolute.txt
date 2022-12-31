@@ -165,3 +165,4 @@ D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\About\Index.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\About\StayConnect.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\Components\GetLastBlog3Posts\Default.cshtml.g.cs

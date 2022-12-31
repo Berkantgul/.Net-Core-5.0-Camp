@@ -16,31 +16,26 @@ namespace blog.business.Concrete
         {
             _categoryRepository = categoryRepository;
         }
-        public void AddCategory(Category category)
-        {
-            _categoryRepository.Insert(category);
-        }
 
-        public void DeleteCategory(Category category)
+        public void Add(Category entity)
         {
-            _categoryRepository.Delete(category);
+            _categoryRepository.Insert(entity);
         }
-
-        public List<Category> GetAllCategory()
+        public void Delete(Category entity)
+        {
+            _categoryRepository.Delete(entity);
+        }
+        public List<Category> GetAllList()
         {
             return _categoryRepository.GetAll();
         }
-
-
-
         public Category GetById(int id)
         {
             return _categoryRepository.GetById(id);
         }
-
-        public void Update(Category category)
+        public void Update(Category entity)
         {
-            _categoryRepository.Update(category);
+            _categoryRepository.Update(entity);
         }
     }
 }

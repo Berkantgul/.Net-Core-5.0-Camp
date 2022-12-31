@@ -13,7 +13,7 @@ namespace blog.webui.ViewComponents
         CategoryManager _categoryManager = new CategoryManager(new EfCoreCategoryRepository());
         public IViewComponentResult Invoke()
         {
-            var categories = _categoryManager.GetAllCategory();
+            var categories = _categoryManager.GetAllList();
             return View(categories);
         }
     }

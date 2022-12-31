@@ -6,8 +6,7 @@ using blog.entity.Concrete;
 
 namespace blog.business.Abstract
 {
-    public interface IAboutService
+    public interface IAboutService : IGenericService<About>
     {
-        List<About> GetAll();
     }
 }

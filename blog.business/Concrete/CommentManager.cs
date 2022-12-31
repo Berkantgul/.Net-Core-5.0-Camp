@@ -16,17 +16,18 @@ namespace blog.business.Concrete
         {
             _commentRepository = commentRepository;
         }
-        public void AddComment(Comment comment)
+
+        public void Add(Comment entity)
         {
-            _commentRepository.Insert(comment);
+            _commentRepository.Insert(entity);
         }
 
-        public void Delete(Comment comment)
+        public void Delete(Comment entity)
         {
             throw new NotImplementedException();
         }
 
-        public List<Comment> GetAll()
+        public List<Comment> GetAllList()
         {
             throw new NotImplementedException();
         }
@@ -41,9 +42,10 @@ namespace blog.business.Concrete
             return _commentRepository.GetAll(i => i.BlogId == id);
         }
 
-        public void UpdateComment(Comment comment)
+        public void Update(Comment entity)
         {
             throw new NotImplementedException();
         }
+
     }
 }

@@ -31,7 +31,7 @@ namespace blog.webui.Controllers
                     AuthorStatus = true,
                     AuthorAbout = "Test"
                 };
-                _authorManager.CreateAuthor(entity);
+                _authorManager.Add(entity);
                 return Redirect("/Blog/Index");
             }
             return View(model);

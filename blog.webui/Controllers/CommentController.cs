@@ -23,7 +23,7 @@ namespace blog.webui.Controllers
             cm.CommentDate = (DateTime)DateTime.Now;
             cm.CommentStatus = true;
             cm.BlogId = 9;
-            _commentManager.AddComment(cm);
+            _commentManager.Add(cm);
             return View();
         }
     }

@@ -6,8 +6,7 @@ using blog.entity.Concrete;
 
 namespace blog.business.Abstract
 {
-    public interface IAuthorService
+    public interface IAuthorService : IGenericService<Author>
     {
-        void CreateAuthor(Author entity);
     }
 }

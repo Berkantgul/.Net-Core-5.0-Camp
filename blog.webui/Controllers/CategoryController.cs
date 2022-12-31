@@ -13,7 +13,7 @@ namespace blog.webui.Controllers
         CategoryManager categoryManager = new CategoryManager(new EfCoreCategoryRepository());
         public IActionResult Index()
         {
-            var values = categoryManager.GetAllCategory();
+            var values = categoryManager.GetAllList();
             return View(values);
         }
     }

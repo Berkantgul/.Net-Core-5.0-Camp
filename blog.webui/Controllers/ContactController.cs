@@ -35,7 +35,7 @@ namespace blog.webui.Controllers
                     ContactStatus = true,
                     ContactDate = (DateTime)DateTime.Now
                 };
-                _contactManager.AddContact(contact);
+                _contactManager.Add(contact);
                 return RedirectToAction("Index");
             }
             return View(model);

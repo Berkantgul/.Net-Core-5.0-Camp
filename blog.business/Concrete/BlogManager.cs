@@ -15,24 +15,9 @@ namespace blog.business.Concrete
         {
             _blogRepository = blogRepository;
         }
-        public void AddBlog(Blog blog)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteBlog(Blog blog)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Blog> GetAll(int id)
         {
             return _blogRepository.GetAll(i => i.BlogId == id);
-        }
-
-        public List<Blog> GetAllBlog()
-        {
-            return _blogRepository.GetAll();
         }
 
         public List<Blog> GetAuthorPopularPost(int id)
@@ -45,12 +30,32 @@ namespace blog.business.Concrete
             return _blogRepository.GetBlogWithCategory();
         }
 
-        public Blog GetByIdBlog(int id)
+        public List<Blog> GetLastBlog3Posts()
+        {
+            return _blogRepository.GetAll().TakeLast(3).ToList();
+        }
+
+        public void Update(Blog entity)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateBlog(Blog blog)
+        public List<Blog> GetAllList()
+        {
+            return _blogRepository.GetAll();
+        }
+
+        public Blog GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Blog entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Add(Blog entity)
         {
             throw new NotImplementedException();
         }

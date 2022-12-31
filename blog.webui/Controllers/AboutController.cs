@@ -13,7 +13,7 @@ namespace blog.webui.Controllers
         AboutManager _aboutManager = new AboutManager(new EfCoreAboutRepository());
         public IActionResult Index()
         {
-            var abouts = _aboutManager.GetAll();
+            var abouts = _aboutManager.GetAllList();
             return View(abouts);
         }
         public PartialViewResult StayConnect()
