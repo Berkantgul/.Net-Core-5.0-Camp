@@ -1,0 +1,63 @@
+@model AuthorBlogModel
+
+@{
+    Layout = "../Shared/_AuthorLayout.cshtml";
+    ViewData["Title"] = "AuthorAddBlog";
+}
+
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Blog Yazını Bizlerle Paylaş..</h4>
+                <br>
+                <form asp-controller="Blog" asp-action="AuthorAddBlog" class="forms-sample">
+                    <div class="form-group">
+                        <label for="exampleInputName1">Başlık</label>
+                        <input asp-for="BlogTitle" class="form-control" id="exampleInputName1" placeholder="Başlık">
+                        <span class="text-danger" asp-validation-for="BlogTitle"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">İçerik</label>
+                        <textarea id="editor" class="form-control" asp-for="BlogContent"></textarea>
+                        <span asp-validation-for="BlogContent" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword4">Resim Yolu</label>
+                        <input  class="form-control" id="exampleInputPassword4" placeholder="Resim Yolu" asp-for="BlogImage">
+                        
+                    </div>
+
+                    @* Kategori alanı olacak *@
+                    <div class="form-group">
+                        <label for="exampleSelectGender">Gender</label>
+                        @Html.DropDownListFor(x=>x.CategoryId,(List<SelectListItem>)ViewBag.cv, new {@class="form-control"})
+                            <span class="text-danger" asp-validation-for="CategoryId"></span>
+                        </div> 
+
+                    @* resim upload edilecek kısım *@
+                    @* <div class="form-group">
+                        <label>File upload</label>
+                        <input type="file" name="img[]" class="file-upload-default">
+                        <div class="input-group col-xs-12">
+                            <input type="text" class="form-control file-upload-info" disabled
+                                placeholder="Upload Image">
+                            <span class="input-group-append">
+                                <button class="file-upload-browse btn btn-gradient-primary"
+                                    type="button">Upload</button>
+                            </span>
+                        </div>
+                    </div> *@
+                    
+                    <button type="submit" class="btn btn-gradient-info mr-2">Blog Ekle</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script src="~/ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace("editor")
+</script>

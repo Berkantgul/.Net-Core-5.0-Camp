@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "blog.webui/1.0.0": {
         "dependencies": {
+          "CKEditor": "3.6.4",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
@@ -332,6 +333,7 @@
           "blog.webui.dll": {}
         }
       },
+      "CKEditor/3.6.4": {},
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
@@ -1796,6 +1798,7 @@
       },
       "blog.business/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.0",
           "blog.data": "1.0.0",
           "blog.entity": "1.0.0"
         },
@@ -3534,6 +3537,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CKEditor/3.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-roGF09wJmp7Zyyvq/bDzbLccKUfMumMpmgPav5U/naoVoDis1izPsSL8H/MEFG3hfFBC4HegSRwlYZG+PWHnaQ==",
+      "path": "ckeditor/3.6.4",
+      "hashPath": "ckeditor.3.6.4.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

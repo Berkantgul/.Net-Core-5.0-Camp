@@ -166,3 +166,11 @@ D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\About\StayConnect.cshtml.g.c
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\Components\GetLastBlog3Posts\Default.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Author\Test.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\_AuthorLayout.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\_AuthorSideBar.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\_AuthorNavbar.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Blog\AuthorAddBlog.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Blog\AuthorBlogList.cshtml.g.cs
+D:\CoreBlog\blog.webui\bin\Debug\net5.0\package-lock.json
+D:\CoreBlog\blog.webui\bin\Debug\net5.0\package.json

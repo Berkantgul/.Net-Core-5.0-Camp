@@ -8,7 +8,7 @@ namespace blog.business.Abstract
 {
     public interface ICategoryService : IGenericService<Category>
     {
-
+        
         // void Update(Category category);
         // List<Category> GetAllCategory();
         // Category GetById(int id);

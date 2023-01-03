@@ -7,6 +7,7 @@ using blog.entity.Concrete;
 using blog.data.Concrete;
 using blog.data.Abstract;
 
+
 namespace blog.business.Concrete
 {
     public class CategoryManager : ICategoryService
@@ -37,5 +38,6 @@ namespace blog.business.Concrete
         {
             _categoryRepository.Update(entity);
         }
+        
     }
 }

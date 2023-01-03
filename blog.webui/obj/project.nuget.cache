@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xaTIrko2BQ5QgBsvV5WwJq2kLwBGbfvcPNSaHPAq9Yc8SfGK3Zwv57zIlcgI9bBffFEwsP1uBu2Jmeuf3larQg==",
+  "dgSpecHash": "/pB6LEG9EELEzpARx4bCvrk5KO6fTf3Z6mKVCCqLqnxzHURtmTbAe425aka74G280aXDkHilGJ4WsSp7oC0PUw==",
   "success": true,
   "projectFilePath": "D:\\CoreBlog\\blog.webui\\blog.webui.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\BERKANT GÜL\\.nuget\\packages\\ckeditor\\3.6.4\\ckeditor.3.6.4.nupkg.sha512",
     "C:\\Users\\BERKANT GÜL\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\BERKANT GÜL\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\BERKANT GÜL\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

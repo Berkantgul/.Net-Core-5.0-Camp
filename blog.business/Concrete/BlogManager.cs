@@ -57,7 +57,12 @@ namespace blog.business.Concrete
 
         public void Add(Blog entity)
         {
-            throw new NotImplementedException();
+            _blogRepository.Insert(entity);
+        }
+
+        public List<Blog> GetAuthorBlogList(int id)
+        {
+            return _blogRepository.GetAll(i => i.AuthorId == 1);
         }
     }
 }
