@@ -27,5 +27,13 @@ namespace blog.data.Concrete
                 return blogs;
             }
         }
+        public List<Blog> GetAuthorBlogListWithAuthorImg()
+        {
+            using (var context = new BlogContext())
+            {
+                var blogs = context.Blogs.Where(i => i.AuthorId == 1).Include(x => x.Author).ToList();
+                return blogs;
+            }
+        }
     }
 }

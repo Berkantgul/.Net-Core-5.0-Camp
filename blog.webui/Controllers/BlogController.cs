@@ -33,20 +33,14 @@ namespace blog.webui.Controllers
         }
         public IActionResult AuthorBlogList()
         {
-            var blogs = _blogManager.GetAuthorBlogList(1);
+            var blogs = _blogManager.GetAuthorBlogListWithAuthorImg();
             return View(blogs);
         }
         [HttpGet]
         public IActionResult AuthorAddBlog()
         {
-            CategoryManager cm = new CategoryManager(new EfCoreCategoryRepository());
-            List<SelectListItem> categoryValues = (from x in cm.GetAllList()
-                                                   select new SelectListItem
-                                                   {
-                                                       Text = x.CategoryName,
-                                                       Value = x.CategoryId.ToString()
-                                                   }).ToList();
-            ViewBag.cv = categoryValues;
+
+            ViewBag.cv = GetSelectCategoryList();
             return View();
         }
         [HttpPost]
@@ -67,6 +61,42 @@ namespace blog.webui.Controllers
                 _blogManager.Add(blog);
                 return RedirectToAction("AuthorBlogList");
             }
+            
+            ViewBag.cv = GetSelectCategoryList();
+            return View(model);
+        }
+        public IActionResult AuthorDeleteBlog(int id)
+        {
+            var entity = _blogManager.TGetById(id);
+            _blogManager.TDelete(entity);
+
+            return RedirectToAction("AuthorBlogList");
+        }
+
+        [HttpGet]
+        public IActionResult AuthorEditBlog(int? id)
+        {
+            var entity = _blogManager.TGetById((int)id);
+            var model = new AuthorBlogModel()
+            {
+                BlogId = entity.BlogId,
+                BlogContent = entity.BlogContent,
+                BlogTitle = entity.BlogTitle,
+                BlogImage = entity.BlogImage,
+                Categorys = entity.Category
+            };
+            ViewBag.cm = GetSelectCategoryList();
+            return View(model);
+        }
+        [HttpPost]
+        public IActionResult AuthorEditBlog(AuthorBlogModel model)
+        {
+            return View();
+        }
+
+
+        List<SelectListItem> GetSelectCategoryList()
+        {
             CategoryManager cm = new CategoryManager(new EfCoreCategoryRepository());
             List<SelectListItem> categoryValues = (from x in cm.GetAllList()
                                                    select new SelectListItem
@@ -74,8 +104,8 @@ namespace blog.webui.Controllers
                                                        Text = x.CategoryName,
                                                        Value = x.CategoryId.ToString()
                                                    }).ToList();
-            ViewBag.cv = categoryValues;
-            return View(model);
+            return categoryValues;
         }
     }
+
 }

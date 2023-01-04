@@ -17,6 +17,7 @@ namespace blog.data.Concrete
         public void Delete(TEntity entity)
         {
             context.Set<TEntity>().Remove(entity);
+            context.SaveChanges();
         }
 
         public List<TEntity> GetAll()

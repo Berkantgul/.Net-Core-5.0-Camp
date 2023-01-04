@@ -13,6 +13,10 @@ namespace blog.webui.Controllers
         {
             return View();
         }
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
         
     }
 }

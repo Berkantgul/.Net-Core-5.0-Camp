@@ -22,7 +22,7 @@ namespace blog.business.Concrete
             _commentRepository.Insert(entity);
         }
 
-        public void Delete(Comment entity)
+        public void TDelete(Comment entity)
         {
             throw new NotImplementedException();
         }
@@ -32,7 +32,7 @@ namespace blog.business.Concrete
             throw new NotImplementedException();
         }
 
-        public Comment GetById(int id)
+        public Comment TGetById(int id)
         {
             throw new NotImplementedException();
         }

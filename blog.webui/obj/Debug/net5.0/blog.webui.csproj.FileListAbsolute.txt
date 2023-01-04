@@ -174,3 +174,7 @@ D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Blog\AuthorAddBlog.cshtml.g.
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Blog\AuthorBlogList.cshtml.g.cs
 D:\CoreBlog\blog.webui\bin\Debug\net5.0\package-lock.json
 D:\CoreBlog\blog.webui\bin\Debug\net5.0\package.json
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Blog\AuthorEditBlog.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Author\Dashboard.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\Components\DashboardLatest10Posts\Default.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\Components\AuthorDashboardCategoryList\Default.cshtml.g.cs

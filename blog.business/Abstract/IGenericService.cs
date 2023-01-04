@@ -9,8 +9,8 @@ namespace blog.business.Abstract
     {
         void Update(TEntity entity);
         List<TEntity> GetAllList();
-        TEntity GetById(int id);
-        void Delete(TEntity entity);
+        TEntity TGetById(int id);
+        void TDelete(TEntity entity);
         void Add(TEntity entity);
     }
 }

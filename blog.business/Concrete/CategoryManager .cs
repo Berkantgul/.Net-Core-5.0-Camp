@@ -22,7 +22,7 @@ namespace blog.business.Concrete
         {
             _categoryRepository.Insert(entity);
         }
-        public void Delete(Category entity)
+        public void TDelete(Category entity)
         {
             _categoryRepository.Delete(entity);
         }
@@ -30,7 +30,7 @@ namespace blog.business.Concrete
         {
             return _categoryRepository.GetAll();
         }
-        public Category GetById(int id)
+        public Category TGetById(int id)
         {
             return _categoryRepository.GetById(id);
         }

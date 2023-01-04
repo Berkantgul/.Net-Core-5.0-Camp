@@ -21,7 +21,7 @@ namespace blog.business.Concrete
             throw new NotImplementedException();
         }
 
-        public void Delete(About entity)
+        public void TDelete(About entity)
         {
             throw new NotImplementedException();
         }
@@ -31,7 +31,7 @@ namespace blog.business.Concrete
             return _aboutRepository.GetAll();
         }
 
-        public About GetById(int id)
+        public About TGetById(int id)
         {
             throw new NotImplementedException();
         }

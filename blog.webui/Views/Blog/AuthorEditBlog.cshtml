@@ -1,8 +1,7 @@
 @model AuthorBlogModel
-
 @{
     Layout = "../Shared/_AuthorLayout.cshtml";
-    ViewData["Title"] = "AuthorAddBlog";
+    ViewData["Title"] = "AuthorEditBlog";
 }
 
 <div class="row">
@@ -12,6 +11,7 @@
                 <h4 class="card-title">@ViewBag.e Yazını Bizlerle Paylaş..</h4>
                 <br>
                 <form asp-controller="Blog" asp-action="AuthorAddBlog" class="forms-sample">
+                    <input type="hidden" asp-for="BlogId">
                     <div class="form-group">
                         <label for="exampleInputName1">Başlık</label>
             
@@ -30,11 +30,11 @@
                     </div>
 
                     @* Kategori alanı olacak *@
-                    <div class="form-group">
+                     <div class="form-group">
                         <label for="exampleSelectGender">Gender</label>
-                        @Html.DropDownListFor(x=>x.CategoryId,(List<SelectListItem>)ViewBag.cv, new {@class="form-control"})
+                            @Html.DropDownListFor(i=>i.CategoryId,(List<SelectListItem>)ViewBag.cm,new {@class="form-control"})
                             <span class="text-danger" asp-validation-for="CategoryId"></span>
-                        </div> 
+                        </div>  
 
                     @* resim upload edilecek kısım *@
                     @* <div class="form-group">

@@ -22,7 +22,7 @@ namespace blog.business.Concrete
         }
 
 
-        public void Delete(Author entity)
+        public void TDelete(Author entity)
         {
             throw new NotImplementedException();
         }
@@ -32,7 +32,7 @@ namespace blog.business.Concrete
             throw new NotImplementedException();
         }
 
-        public Author GetById(int id)
+        public Author  TGetById(int id)
         {
             throw new NotImplementedException();
         }

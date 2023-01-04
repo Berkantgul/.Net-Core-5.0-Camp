@@ -45,14 +45,14 @@ namespace blog.business.Concrete
             return _blogRepository.GetAll();
         }
 
-        public Blog GetById(int id)
+        public Blog TGetById(int id)
         {
-            throw new NotImplementedException();
+            return _blogRepository.GetById(id);
         }
 
-        public void Delete(Blog entity)
+        public void TDelete(Blog entity)
         {
-            throw new NotImplementedException();
+            _blogRepository.Delete(entity);
         }
 
         public void Add(Blog entity)
@@ -63,6 +63,10 @@ namespace blog.business.Concrete
         public List<Blog> GetAuthorBlogList(int id)
         {
             return _blogRepository.GetAll(i => i.AuthorId == 1);
+        }
+        public List<Blog> GetAuthorBlogListWithAuthorImg()
+        {
+            return _blogRepository.GetAuthorBlogListWithAuthorImg();
         }
     }
 }

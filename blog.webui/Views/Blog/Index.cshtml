@@ -8,7 +8,7 @@
 
     @foreach (var blog in Model)
     {
-        <div class="col-lg-4 card">
+        <div class="col-lg-4 card ">
             <a href="single.html">
                 <img src="~/web/@blog.BlogImage" class="card-img-top img-fluid" alt="">
             </a>
@@ -31,11 +31,16 @@
                 <h5 class="card-title">
                     <a href="single.html">@blog.BlogTitle</a>
                 </h5>
-                <p class="card-text mb-3">@blog.BlogContent.Substring(0,blog.BlogContent.Substring(0,125).LastIndexOf(" "))
+                <p class="card-text mb-3">
+                    @Html.Raw(blog.BlogContent.Substring(0,blog.BlogContent.Substring(0,250).LastIndexOf(" ")))
                     ...</p>
+
+            </div>
+            <div class="card-footer">
                 <a href="/Blog/BlogDetail/@blog.BlogId" class="btn btn-primary read-m">Devamını Oku</a>
             </div>
         </div>
     }
 
 </div>
+@* @blog.BlogContent.Substring(0,blog.BlogContent.Substring(0,125).LastIndexOf(" ")) *@

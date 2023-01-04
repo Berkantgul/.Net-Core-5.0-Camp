@@ -23,7 +23,7 @@ namespace blog.business.Concrete
 
 
 
-        public void Delete(Contact entity)
+        public void TDelete(Contact entity)
         {
             throw new NotImplementedException();
         }
@@ -33,7 +33,7 @@ namespace blog.business.Concrete
             throw new NotImplementedException();
         }
 
-        public Contact GetById(int id)
+        public Contact TGetById(int id)
         {
             throw new NotImplementedException();
         }
