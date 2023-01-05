@@ -178,3 +178,5 @@ D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Blog\AuthorEditBlog.cshtml.g
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Author\Dashboard.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\Components\DashboardLatest10Posts\Default.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\Components\AuthorDashboardCategoryList\Default.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\Components\DashboardAuthorAbout\Default.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Author\AuthorUpdate.cshtml.g.cs

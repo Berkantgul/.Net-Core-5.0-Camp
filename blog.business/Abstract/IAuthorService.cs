@@ -8,5 +8,6 @@ namespace blog.business.Abstract
 {
     public interface IAuthorService : IGenericService<Author>
     {
+        List<Author> GetAllAuthor(int id);
     }
 }

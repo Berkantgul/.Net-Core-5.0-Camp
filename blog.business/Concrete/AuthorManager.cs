@@ -32,14 +32,20 @@ namespace blog.business.Concrete
             throw new NotImplementedException();
         }
 
-        public Author  TGetById(int id)
+        public Author TGetById(int id)
         {
-            throw new NotImplementedException();
+            return _authorRepository.GetById(id);
         }
 
         public void Update(Author entity)
         {
-            throw new NotImplementedException();
+            _authorRepository.Update(entity);
+
+        }
+
+        public List<Author> GetAllAuthor(int id)
+        {
+            return _authorRepository.GetAll(i => i.AuthorId == id);
         }
     }
 }
