@@ -180,3 +180,4 @@ D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\Components\DashboardL
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\Components\AuthorDashboardCategoryList\Default.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\Components\DashboardAuthorAbout\Default.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Author\AuthorUpdate.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Views\Shared\Components\GetNotificationList\Default.cshtml.g.cs

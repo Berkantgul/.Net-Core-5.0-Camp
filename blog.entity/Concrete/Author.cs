@@ -17,5 +17,7 @@ namespace blog.entity.Concrete
         public string AuthorAbout { get; set; }
         public bool AuthorStatus { get; set; }
         public List<Blog> Blogs { get; set; }
+        public virtual ICollection<Message> AuthorSender { get; set; }
+        public virtual ICollection<Message> AuthorReceiver { get; set; }
     }
 }

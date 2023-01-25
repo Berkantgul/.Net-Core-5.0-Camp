@@ -15,12 +15,17 @@ namespace blog.webui.Controllers
     public class AuthorController : Controller
     {
         AuthorManager _authorManager = new AuthorManager(new EfCoreAuthorRepository());
+        BlogManager _blogManager = new BlogManager(new EfCoreBlogRepository());
+        CategoryManager _categoryManager = new CategoryManager(new EfCoreCategoryRepository());
         public IActionResult Test()
         {
             return View();
         }
         public IActionResult Dashboard()
         {
+            ViewBag.BlogCOunt = BlogCount();
+            ViewBag.AuthorBlogCount = AuthorBlogCount();
+            ViewBag.CategoryCount = CategoryCount();
             return View();
         }
         [HttpGet]
@@ -51,7 +56,7 @@ namespace blog.webui.Controllers
                 {
                     var extension = Path.GetExtension(model.AuthorImage.FileName);
                     var newimagename = Guid.NewGuid() + extension;
-                    var location = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/WriterImageFiles", newimagename);
+                    var location = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/WriterImageFiles/", newimagename);
                     var stream = new FileStream(location, FileMode.Create);
                     model.AuthorImage.CopyTo(stream);
                     entity.AuthorImage = newimagename;
@@ -67,5 +72,18 @@ namespace blog.webui.Controllers
             }
             return View(model);
         }
+        int BlogCount()
+        {
+            return _blogManager.GetAllList().Count();
+        }
+        int AuthorBlogCount()
+        {
+            return _blogManager.GetAuthorBlogList(1).Count();
+        }
+        int CategoryCount()
+        {
+            return _categoryManager.GetAllList().Count;
+        }
     }
+
 }

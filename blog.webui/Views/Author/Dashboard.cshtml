@@ -47,7 +47,7 @@
                         <h4 class="font-weight-normal mb-3">Toplam Blog Sayısı <i
                                 class="mdi mdi-chart-line mdi-24px float-right"></i>
                         </h4>
-                        <h2 class="mb-5">0</h2>
+                        <h2 class="mb-5">@ViewBag.BlogCount</h2>
                         <h6 class="card-text">Tebrikler</h6>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                         <h4 class="font-weight-normal mb-3">Sizin Blog Sayınız <i
                                 class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
                         </h4>
-                        <h2 class="mb-5">0</h2>
+                        <h2 class="mb-5">@ViewBag.AuthorBlogCount</h2>
                         <h6 class="card-text">Tebrikler</h6>
                     </div>
                 </div>
@@ -70,10 +70,10 @@
                     <div class="card-body">
                         <img src="~/writer/assets/images/dashboard/circle.svg" class="card-img-absolute"
                             alt="circle-image" />
-                        <h4 class="font-weight-normal mb-3">Son Yedi Gündeki Blog Sayısı<i
+                        <h4 class="font-weight-normal mb-3">Kategori Sayısı<i
                                 class="mdi mdi-diamond mdi-24px float-right"></i>
                         </h4>
-                        <h2 class="mb-5">0</h2>
+                        <h2 class="mb-5">@ViewBag.CategoryCount</h2>
                         <h6 class="card-text">Başarılar</h6>
                     </div>
                 </div>

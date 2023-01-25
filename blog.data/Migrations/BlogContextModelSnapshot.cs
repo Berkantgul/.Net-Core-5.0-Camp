@@ -226,6 +226,40 @@ namespace blog.data.Migrations
                     b.ToTable("Contacts");
                 });
 
+            modelBuilder.Entity("blog.entity.Concrete.Message", b =>
+                {
+                    b.Property<int>("MessageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("MessageDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MessageDetails")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("MessageStatus")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("ReceiverId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SenderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Subject")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("MessageId");
+
+                    b.HasIndex("ReceiverId");
+
+                    b.HasIndex("SenderId");
+
+                    b.ToTable("Messages");
+                });
+
             modelBuilder.Entity("blog.entity.Concrete.Newsletter", b =>
                 {
                     b.Property<int>("MailId")
@@ -242,6 +276,36 @@ namespace blog.data.Migrations
                     b.HasKey("MailId");
 
                     b.ToTable("Newsletters");
+                });
+
+            modelBuilder.Entity("blog.entity.Concrete.Notification", b =>
+                {
+                    b.Property<int>("NotificationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("NotificationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NotificationDetail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("NotificationStatus")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("NotificationType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NotificationTypeColor")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NotificationTypeSymbol")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("NotificationId");
+
+                    b.ToTable("Notifications");
                 });
 
             modelBuilder.Entity("blog.entity.Concrete.Blog", b =>
@@ -274,8 +338,27 @@ namespace blog.data.Migrations
                     b.Navigation("Blog");
                 });
 
+            modelBuilder.Entity("blog.entity.Concrete.Message", b =>
+                {
+                    b.HasOne("blog.entity.Concrete.Author", "ReceiverUser")
+                        .WithMany("AuthorReceiver")
+                        .HasForeignKey("ReceiverId");
+
+                    b.HasOne("blog.entity.Concrete.Author", "SenderUser")
+                        .WithMany("AuthorSender")
+                        .HasForeignKey("SenderId");
+
+                    b.Navigation("ReceiverUser");
+
+                    b.Navigation("SenderUser");
+                });
+
             modelBuilder.Entity("blog.entity.Concrete.Author", b =>
                 {
+                    b.Navigation("AuthorReceiver");
+
+                    b.Navigation("AuthorSender");
+
                     b.Navigation("Blogs");
                 });
 
