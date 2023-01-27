@@ -31,7 +31,7 @@ namespace blog.webui.Controllers
         [HttpGet]
         public IActionResult AuthorUpdate()
         {
-            var entity = _authorManager.TGetById(1);
+            var entity = _authorManager.TGetById(2);
             if (entity == null)
             {
                 return NotFound();

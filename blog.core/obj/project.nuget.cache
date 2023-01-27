@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mPEQVrtm/Evl3WXqlCeyzf9DrmsOxFLFnL0eNpUHe7awaz2fdbjEp4TmXTNnl/eHAk+OvRXKrBbNSj9RRRfvkQ==",
+  "dgSpecHash": "xsRCC5nVYdDh9/6ENkuLWdIzo5Pdiflj2GnrIevyObsgV62nP7zxIzZS2B1zYP6Xd4cqeuNH694zuqprFJfZZQ==",
   "success": true,
-  "projectFilePath": "d:\\CoreBlog\\blog.core\\blog.core.csproj",
+  "projectFilePath": "D:\\CoreBlog\\blog.core\\blog.core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

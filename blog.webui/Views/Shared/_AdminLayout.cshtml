@@ -1,0 +1,105 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Panel</title>
+
+    <link href="~/inspinia-gh-pages/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/inspinia-gh-pages/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="~/inspinia-gh-pages/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <link href="~/inspinia-gh-pages/css/animate.css" rel="stylesheet">
+    <link href="~/inspinia-gh-pages/css/style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <partial name="_AdminSidebar.cshtml" />
+        <div id="page-wrapper" class="gray-bg">
+            <partial name="_AdminNavbar.cshtml" />
+            <div class="wrapper wrapper-content  animated fadeInRight">
+                <div class="row">
+                    @RenderBody()
+                </div>
+            </div>
+            <div class="footer">
+                <div class="float-right">
+                    10GB of <strong>250GB</strong> Free.
+                </div>
+                <div>
+                    <strong>Tüm hakları saklıdır.</strong> Example Company &copy; @DateTime.Now
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="~/inspinia-gh-pages/js/jquery-3.1.1.min.js"></script>
+    <script src="~/inspinia-gh-pages/js/popper.min.js"></script>
+    <script src="~/inspinia-gh-pages/js/bootstrap.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="~/inspinia-gh-pages/js/inspinia.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/pace/pace.min.js"></script>
+
+    <!-- Diff march patch -->
+    <script src="~/inspinia-gh-pages/js/plugins/diff_match_patch/javascript/diff_match_patch.js"></script>
+
+    <!-- jQuery pretty text diff -->
+    <script src="~/inspinia-gh-pages/js/plugins/preetyTextDiff/jquery.pretty-text-diff.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            // Initial diff1
+            $(".diff-wrapper").prettyTextDiff({
+                diffContainer: ".diff1"
+            });
+
+
+            // Initial diff2
+            $(".diff-wrapper2").prettyTextDiff({
+                originalContent: $('#original').val(),
+                changedContent: $('#changed').val(),
+                diffContainer: ".diff2"
+            });
+
+            // Run diff on textarea change
+            $(".diff-textarea").on('change keyup', function () {
+                $(".diff-wrapper2").prettyTextDiff({
+                    originalContent: $('#original').val(),
+                    changedContent: $('#changed').val(),
+                    diffContainer: ".diff2"
+                });
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

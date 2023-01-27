@@ -1,0 +1,16 @@
+@{
+    Layout = "../../../../Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "StatixExcelReport";
+}
+
+
+
+<button class="btn btn-success" onclick="GetExcelReport()">Excel İçeriğini İndir</button>
+
+
+<script>
+    function GetExcelReport()
+    {
+        window.open("/Admin/Blog/ExportStaticExcelBlogList/");
+    }
+</script>

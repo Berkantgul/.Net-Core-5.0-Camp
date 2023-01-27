@@ -1,0 +1,22 @@
+@model blog.webui.Areas.Admin.Models.AddCategoryModel
+@{
+    Layout = "../../../../Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "AddCategory";
+}
+
+<div class="col-lg-8">
+    <form action="/Admin/Category/AddCategory/" method="post">
+        <div>
+            <label asp-for="CategoryName"></label>
+            <input asp-for="CategoryName" class="form-control">
+            <span asp-validation-for="CategoryName" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="CategoryDescription"></label>
+            <input asp-for="CategoryDescription" class="form-control">
+            <span asp-validation-for="CategoryDescription" class="text-danger"></span>
+        </div>
+        <br>
+        <button class="btn btn-success" type="submit">Kategori Ekle</button>
+    </form>
+</div>
