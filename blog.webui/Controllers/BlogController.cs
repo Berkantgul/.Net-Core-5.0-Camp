@@ -17,6 +17,11 @@ namespace blog.webui.Controllers
     public class BlogController : Controller
     {
         BlogManager _blogManager = new BlogManager(new EfCoreBlogRepository());
+        // private readonly BlogManager _blogService;
+        // public BlogController(BlogManager blogService)
+        // {
+        //     _blogService = blogService;
+        // }
         public IActionResult Index()
         {
 
@@ -61,7 +66,7 @@ namespace blog.webui.Controllers
                 _blogManager.Add(blog);
                 return RedirectToAction("AuthorBlogList");
             }
-            
+
             ViewBag.cv = GetSelectCategoryList();
             return View(model);
         }

@@ -14,5 +14,7 @@ namespace blog.business.Abstract
         // void UpdateComment(Comment comment);
         // void Delete(Comment comment);
         List<Comment> GetCommentByBlog(int id);
+        int WidgetCommentCount();
+        
     }
 }

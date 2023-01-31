@@ -42,5 +42,10 @@ namespace blog.business.Concrete
         {
             throw new NotImplementedException();
         }
+
+        public int WidgetContactCount()
+        {
+            return _contactRepository.ContactCount();
+        }
     }
 }

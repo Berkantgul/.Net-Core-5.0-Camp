@@ -8,5 +8,6 @@ namespace blog.business.Abstract
 {
     public interface IContactService : IGenericService<Contact>
     {
+        int WidgetContactCount();
     }
 }

@@ -8,6 +8,6 @@ namespace blog.data.Abstract
 {
     public interface IContactRepository : IRepository<Contact>
     {
-
+        int ContactCount();
     }
 }

@@ -32,6 +32,8 @@ namespace blog.business.Concrete
             throw new NotImplementedException();
         }
 
+        
+
         public Comment TGetById(int id)
         {
             throw new NotImplementedException();
@@ -47,5 +49,9 @@ namespace blog.business.Concrete
             throw new NotImplementedException();
         }
 
+        public int WidgetCommentCount()
+        {
+            return _commentRepository.CommentCount();
+        }
     }
 }

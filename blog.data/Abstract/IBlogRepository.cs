@@ -11,6 +11,8 @@ namespace blog.data.Abstract
         List<Blog> GetBlogWithCategory();
         List<Blog> GetAuthorPopularPost(int id);
         List<Blog> GetAuthorBlogListWithAuthorImg();
+        int BlogCount();
+        string LastBlog();
     
     }
 }

@@ -68,5 +68,15 @@ namespace blog.business.Concrete
         {
             return _blogRepository.GetAuthorBlogListWithAuthorImg();
         }
+
+        public int WidgetBlogCount()
+        {
+            return _blogRepository.BlogCount();
+        }
+
+        public string WidgetLastBlog()
+        {
+            return _blogRepository.LastBlog();
+        }
     }
 }

@@ -35,5 +35,23 @@ namespace blog.data.Concrete
                 return blogs;
             }
         }
+
+        public int BlogCount()
+        {
+            using (var context = new BlogContext())
+            {
+                var count = context.Blogs.Count();
+                return count;
+            }
+        }
+
+        public string LastBlog()
+        {
+            using (var context = new BlogContext())
+            {
+                var blog = context.Blogs.Select(i => i.BlogTitle).Take(1).FirstOrDefault();
+                return blog;
+            }
+        }
     }
 }

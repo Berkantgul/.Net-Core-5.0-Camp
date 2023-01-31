@@ -8,6 +8,6 @@ namespace blog.data.Abstract
 {
     public interface ICommentRepository : IRepository<Comment>
     {
-
+        int CommentCount();
     }
 }
