@@ -24,12 +24,12 @@ namespace blog.business.Concrete
 
         public void TDelete(Author entity)
         {
-            throw new NotImplementedException();
+            _authorRepository.Delete(entity);
         }
 
         public List<Author> GetAllList()
         {
-            throw new NotImplementedException();
+            return _authorRepository.GetAll();
         }
 
         public Author TGetById(int id)

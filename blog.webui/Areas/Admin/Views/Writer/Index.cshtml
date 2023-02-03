@@ -1,0 +1,204 @@
+﻿@model AuthorUpdateModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+<div class="col-lg-12">
+    <button class="btn btn-warning btn-sm" id="btngetlist">Yazar Listesi</button>
+
+    <button data-toggle="collapse" data-target="#demo" class="btn btn-danger btn-sm">Id'ye göre yazar getir</button>
+    <button data-toggle="collapse" data-target="#demo1" class="btn btn-info btn-sm">Yazar Ekle</button>
+    <button data-toggle="collapse" data-target="#demo2" class="btn btn-warning btn-sm">Yazar Sil</button>
+
+    <div id="demo" class="collapse">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" name="id" id="writerid" class="form-control " />
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-secondary" id="btngetbyid">  Bul  </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="demo1" class="collapse">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="AutorName"></label>
+                    <input asp-for="AutorName" id="AutorName" class="form-control " />
+                    <span asp-validation-for="AutorName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mail"></label>
+                    <input asp-for="Mail" id="Mail" class="form-control " />
+                    <span asp-validation-for="Mail" class="text-danger"></span>
+                </div>
+                <button class="btn btn-secondary" id="btnauthoradd">  Ekle  </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="demo2" class="collapse">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" name="id" id="deletewriterid" class="form-control " placeholder="bir id değeri girin." />
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-secondary" id="btndeleteauthor">  Sil  </button>
+            </div>
+        </div>
+
+    </div>
+    @*<input type="text" id="writerid" name="id" class="form-control" />*@
+    <br />
+    <br />
+    <div id="writerlist">
+
+    </div>
+    <div id="getbyid">
+
+    </div>
+</div>
+
+
+
+
+@section scripts
+{
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script>
+
+        //$("#btngetlist").click(function () {
+        //    $.ajax({
+        //        contentType: "application/json",
+        //        dataType: "json",
+        //        type: "Get",
+        //        url: "/Admin/Writer/AjaxAuthorList/",
+        //        success: function (func) {
+        //            console.log(w);
+        //            let tablehtml = "<div class='ibox-title'><h5>Yazar Listesi</h5></div><div class='ibox-content'><table class='table'><thead><tr><th> Yazar ID</th> <th> Yazar Adı </th></tr></thead>";
+        //            $.each(w, (index, value) => {
+        //                tablehtml += `<tr><td>${value.authorid}</td> <td>${value.authorname}</td></tr>`
+        //            });
+        //            tablehtml += "</table></div>";
+        //            $("#writerlist").html(tablehtml);
+        //        }
+        //    });
+        //
+        // });
+        $("#btngetlist").click(function () {
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "Get",
+                url: "/Admin/Writer/AjaxAuthorList/",
+                success: function (func) {
+                    let w = jQuery.parseJSON(func)
+                    console.log(w);
+                    let tablehtml = "<div class='ibox-title'><h5>Yazar Listesi</h5></div><div class='ibox-content'><table class='table'><thead><tr><th> Yazar ID</th> <th> Yazar Adı </th></tr></thead>";
+                    $.each(w, (index, value) => {
+                        tablehtml += `<tr><td>${value.AuthorId}</td> <td>${value.AuthorName}</td></tr>`
+                    });
+                    tablehtml += "</table></div>";
+                    $("#writerlist").html(tablehtml);
+                }
+            });
+
+        });
+
+
+        $("#btngetbyid").click(x => {
+            let id = $("#writerid").val();
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "get",
+                url: "/Admin/Writer/AuthorGetById/",
+                data: { writerid: id },
+                success: function (func) {
+                    let w = jQuery.parseJSON(func);
+                    let getvalue = `
+                                                                            <div class='ibox-title'>
+                                                                                <h5>Yazar Listesi</h5>
+                                                                            </div>
+                                                                            <div class='ibox-content'>
+                                                                                <table class='table'>
+                                                                                    <thead>
+                                                                                        <tr><th> Yazar ID</th> <th> Yazar Adı </th></tr>
+                                                                                    </thead>
+                                                                                    <tr><td>${w.AuthorId}</td> <td>${w.AuthorName}</td></tr>`;
+                    $("#getbyid").html(getvalue);
+                    showContent(`${w.AuthorName} adlı kişi gösteriliyor.`);
+                    console.log(w);
+                }
+            });
+            console.log(id);
+        });
+
+
+        $("#btnauthoradd").click(function () {
+            let writer = {
+                AutorName: $("#AutorName").val(),
+                Mail: $("#Mail").val()
+            };
+            $.ajax({
+                type: "post",
+                url: "/Admin/Writer/AddAuthor/",
+                data: writer,
+                success: function (func) {
+                    if (writer != null) {
+                        showContent(`${writer.AutorName} kişisi eklendi.`, "success");
+                    }
+                    else {
+                        showContent("Hata", "warning");
+                    }
+                }
+            })
+        })
+
+        $("#btndeleteauthor").click(x => {
+            let id = $("#deletewriterid").val();
+            $.ajax({
+                url: "/Admin/Writer/DeleteAuthor/" + id,
+                type: "post",
+                dataType: "json",
+                success: function (func) {
+                    showContent(`${id} kişisi silindi`, "success");
+                }
+            })
+        })
+
+        $("#demo").collapse({
+            toggle: false
+        });
+
+
+        function showContent(mesaj, color) {
+            toastr.options = {
+                "closeButton": false, //Kapama butonu durumu
+                "debug": false,
+                "progressBar": true,
+                "preventDuplicates": true,
+                "positionClass": "toast-top-right", //Ekran görüntü seçenekleri: top-left(Yukarı Sol), top(yukari orta), bottom-left(aşağı sol), bottom(aşağı orta), bottom-right(aşağı sağ)
+                "showDuration": "200",
+                "hideDuration": "2000",
+                "timeOut": "5000", //Gözükme süresi.
+                "extendedTimeOut": "2000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr[color](mesaj);
+            //Farklı mesaj türleri için yanda ki içerikleri kullanabilirsiniz. success(yeşil), danger(kırmızı), warning(sarı)
+        }
+    </script>
+
+}
+
