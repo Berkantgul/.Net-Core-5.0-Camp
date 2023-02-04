@@ -38,6 +38,20 @@ namespace blog.business.Concrete
         {
             _categoryRepository.Update(entity);
         }
-        
+
+        public Task<List<Category>> ApiGetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(Category entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddAsync(Category entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -20,9 +20,24 @@ namespace blog.business.Concrete
             throw new NotImplementedException();
         }
 
+        public Task AddAsync(Message entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<Message>> ApiGetAll()
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Message> AuthorInbox(int id)
         {
             return _messageRepository.AuthorMessageInbox(id);
+        }
+
+        public Task DeleteAsync(Message entity)
+        {
+            throw new NotImplementedException();
         }
 
         public List<Message> GetAllList()

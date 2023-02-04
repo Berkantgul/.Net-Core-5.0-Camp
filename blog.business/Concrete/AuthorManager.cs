@@ -47,5 +47,20 @@ namespace blog.business.Concrete
         {
             return _authorRepository.GetAll(i => i.AuthorId == id);
         }
+
+        public async Task<List<Author>> ApiGetAll()
+        {
+            return await _authorRepository.ApiGetAll();
+        }
+
+        public async Task DeleteAsync(Author entity)
+        {
+            await _authorRepository.DeleteAsync(entity);
+        }
+
+        public async Task AddAsync(Author entity)
+        {
+            await _authorRepository.InsertAsync(entity);
+        }
     }
 }

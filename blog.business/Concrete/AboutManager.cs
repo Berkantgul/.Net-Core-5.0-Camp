@@ -40,5 +40,20 @@ namespace blog.business.Concrete
         {
             throw new NotImplementedException();
         }
+
+        public Task<List<About>> ApiGetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(About entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddAsync(About entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

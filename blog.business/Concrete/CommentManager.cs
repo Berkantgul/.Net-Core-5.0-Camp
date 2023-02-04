@@ -53,5 +53,20 @@ namespace blog.business.Concrete
         {
             return _commentRepository.CommentCount();
         }
+
+        public Task<List<Comment>> ApiGetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(Comment entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddAsync(Comment entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

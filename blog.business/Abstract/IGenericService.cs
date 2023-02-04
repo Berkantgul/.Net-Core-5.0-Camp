@@ -9,8 +9,11 @@ namespace blog.business.Abstract
     {
         void Update(TEntity entity);
         List<TEntity> GetAllList();
+        Task<List<TEntity>> ApiGetAll();
         TEntity TGetById(int id);
         void TDelete(TEntity entity);
+        Task DeleteAsync(TEntity entity);
         void Add(TEntity entity);
+        Task AddAsync(TEntity entity);
     }
 }

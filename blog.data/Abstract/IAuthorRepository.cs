@@ -8,6 +8,6 @@ namespace blog.data.Abstract
 {
     public interface IAuthorRepository : IRepository<Author>
     {
-
+        
     }
 }

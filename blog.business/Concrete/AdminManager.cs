@@ -21,6 +21,21 @@ namespace blog.business.Concrete
             throw new NotImplementedException();
         }
 
+        public Task AddAsync(Admin entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<Admin>> ApiGetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(Admin entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Admin> GetAllList()
         {
             return _adminRepository.GetAll();

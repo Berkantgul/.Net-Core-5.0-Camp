@@ -13,7 +13,7 @@ namespace blog.webui.Models
         [Required(ErrorMessage = "Ad alanı boş geçilemez!")]
         [StringLength(maximumLength: 30, MinimumLength = 2,ErrorMessage ="Karakter uzunluğu 2-30 arası olmalıdır!")]
         public string AutorName { get; set; }
-        [Required(ErrorMessage ="Görsel alanı gereklidir!")]
+        [Required(ErrorMessage = "Görsel alanı gereklidir!")]
         public IFormFile AuthorImage { get; set; }
         [Required(ErrorMessage ="Mail alanı gereklidir!")]
         [DataType(DataType.EmailAddress)]

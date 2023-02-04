@@ -1,0 +1,27 @@
+﻿@model List<Author>
+@{
+    ViewData["Title"] = "ApiAuthorList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>ApiAuthorList</h1>
+
+<div class="col-md-12">
+    <table class="table table-hover">
+        <tr>
+            <th>#</th>
+            <th>Yazar Adı</th>
+            <th>İşlemler</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.AuthorId</td>
+                <td>@item.AutorName</td>
+                <td><a href="#" class="btn btn-warning btn-sm">Düzenle</a></td>
+                <td><a href="#" class="btn btn-danger btn-sm">Sil</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Admin/Writer/ApiAddAuthor/" class="btn btn-success">Yazar Ekle</a>
+</div>

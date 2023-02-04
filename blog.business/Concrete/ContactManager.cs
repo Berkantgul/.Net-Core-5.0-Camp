@@ -47,5 +47,20 @@ namespace blog.business.Concrete
         {
             return _contactRepository.ContactCount();
         }
+
+        public Task<List<Contact>> ApiGetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(Contact entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddAsync(Contact entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

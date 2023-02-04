@@ -78,5 +78,20 @@ namespace blog.business.Concrete
         {
             return _blogRepository.LastBlog();
         }
+
+        public Task<List<Blog>> ApiGetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(Blog entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task AddAsync(Blog entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

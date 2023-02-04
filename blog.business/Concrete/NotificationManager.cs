@@ -20,6 +20,21 @@ namespace blog.business.Concrete
             throw new NotImplementedException();
         }
 
+        public Task AddAsync(Notification entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<Notification>> ApiGetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(Notification entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Notification> GetAllList()
         {
             var values = _notificationRepository.GetAll(i=>i.NotificationStatus==true).TakeLast(3).ToList();

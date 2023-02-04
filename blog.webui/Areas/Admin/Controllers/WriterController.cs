@@ -8,7 +8,10 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace blog.webui.Areas.Admin.Controllers
@@ -74,7 +77,37 @@ namespace blog.webui.Areas.Admin.Controllers
             }
             return authorModels;
         }
+        public async Task<IActionResult> ApiAuthorList()
+        {
+            var httpClient = new HttpClient();
+            var responseMessage = await httpClient.GetAsync("https://localhost:5001/api/author");
+            var jsonString = await responseMessage.Content.ReadAsStringAsync();
+            var values = JsonConvert.DeserializeObject<List<Author>>(jsonString);
+            return View(values);
+        }
 
+        [HttpGet]
+        public IActionResult ApiAddAuthor()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ApiAddAuthor(ApiAuthorModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var httpClient = new HttpClient();
+                var jsonAuthor = JsonConvert.SerializeObject(model);
+                StringContent content = new StringContent(jsonAuthor, Encoding.UTF8, "application/json");
+                var responseMessage = await httpClient.PostAsync("https://localhost:5001/api/author", content);
+                if(responseMessage.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("ApiAuthorList");
+                }
+            }
+
+            return View(model);
+        }
 
 
     }

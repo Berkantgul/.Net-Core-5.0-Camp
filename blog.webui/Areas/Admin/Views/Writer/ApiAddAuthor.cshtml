@@ -1,0 +1,29 @@
+﻿@model blog.webui.Areas.Admin.Models.ApiAuthorModel
+@{
+    ViewData["Title"] = "ApiAddAuthor";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-12">
+    <form class="forms-sample" asp-controller="Writer" asp-area="Admin" asp-action="ApiAddAuthor">
+    
+        <div class="form-group">
+            <label for="exampleInputName1">Adınız</label>
+            <input class="form-control" id="exampleInputName1" asp-for="AuthorName">
+            <span class="text-danger" asp-validation-for="AuthorName"></span>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail3">Email</label>
+            <input class="form-control" id="exampleInputEmail3" asp-for="Mail">
+            <span class="text-danger" asp-validation-for="Mail"></span>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword4">Şifre</label>
+            <input class="form-control" id="exampleInputPassword4" asp-for="Password">
+            <span class="text-danger" asp-validation-for="Password"></span>
+        </div>
+       
+        <button type="submit" class="btn btn-success btn-rounded">Ekle</button>
+    </form>
+</div>
+

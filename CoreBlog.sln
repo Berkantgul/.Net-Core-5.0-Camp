@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "blog.data", "blog.data\blog
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "blog.entity", "blog.entity\blog.entity.csproj", "{F09D5B92-1BB7-4DED-8013-B13B1D33F9B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blog.webui", "blog.webui\blog.webui.csproj", "{9DB8BA21-D480-48E8-A1E6-8E5088A9D9A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "blog.webui", "blog.webui\blog.webui.csproj", "{9DB8BA21-D480-48E8-A1E6-8E5088A9D9A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "blog.webapi", "blog.webapi\blog.webapi.csproj", "{C57059B0-A390-4F90-8FEA-9D513DDB0981}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{9DB8BA21-D480-48E8-A1E6-8E5088A9D9A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DB8BA21-D480-48E8-A1E6-8E5088A9D9A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DB8BA21-D480-48E8-A1E6-8E5088A9D9A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C57059B0-A390-4F90-8FEA-9D513DDB0981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C57059B0-A390-4F90-8FEA-9D513DDB0981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C57059B0-A390-4F90-8FEA-9D513DDB0981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C57059B0-A390-4F90-8FEA-9D513DDB0981}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using blog.data.Abstract;
+using Microsoft.EntityFrameworkCore;
 
 namespace blog.data.Concrete
 {
@@ -13,11 +14,22 @@ namespace blog.data.Concrete
 
         BlogContext context = new BlogContext();
 
+        public async Task<List<TEntity>> ApiGetAll()
+        {
+            
+            return await context.Set<TEntity>().ToListAsync();
+        }
 
         public void Delete(TEntity entity)
         {
             context.Set<TEntity>().Remove(entity);
             context.SaveChanges();
+        }
+
+        public async Task DeleteAsync(TEntity entity)
+        {
+            context.Set<TEntity>().Remove(entity);
+            await context.SaveChangesAsync();
         }
 
         public List<TEntity> GetAll()
@@ -39,6 +51,12 @@ namespace blog.data.Concrete
         {
             context.Set<TEntity>().Add(entity);
             context.SaveChanges();
+        }
+
+        public async Task InsertAsync(TEntity entity)
+        {
+            await context.Set<TEntity>().AddAsync(entity);
+            await context.SaveChangesAsync();
         }
 
         public void Update(TEntity entity)
