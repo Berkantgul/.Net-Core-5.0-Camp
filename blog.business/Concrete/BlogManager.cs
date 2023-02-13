@@ -93,5 +93,10 @@ namespace blog.business.Concrete
         {
             throw new NotImplementedException();
         }
+
+        public Task UpdateAsync(Author entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

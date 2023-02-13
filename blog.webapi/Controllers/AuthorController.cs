@@ -21,24 +21,36 @@ namespace blog.webapi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetList()
         {
-            return Ok(await _authorManager.ApiGetAll());
+            var authors = new List<ApiAuthorModel>();
+            foreach (var item in await _authorManager.ApiGetAll())
+            {
+                authors.Add(new ApiAuthorModel()
+                {
+                    AuthorId = item.AuthorId,
+                    AuthorName = item.AutorName,
+                    Mail = item.Mail,
+                    Password = item.Password
+                });
+            }
+
+            return Ok(authors);
         }
         [HttpPost]
-        public async Task<IActionResult> AddAuthor(ApiAuthorModel model)
+        public async Task<IActionResult> AddAuthor(webui.Areas.Admin.Models.ApiAuthorModel model)
         {
-            
-                var entity = new Author()
-                {
-                    AutorName = model.AuthorName,
-                    Password = model.Password,
-                    Mail = model.Mail,
-                    AuthorStatus = true,
-                };
-                await _authorManager.AddAsync(entity);
 
-                return Ok();
-            
-            
+            var entity = new entity.Concrete.Author()
+            {
+                AutorName = model.AuthorName,
+                Password = model.Password,
+                Mail = model.Mail,
+                AuthorStatus = true,
+            };
+            await _authorManager.AddAsync(entity);
+
+            return Ok();
+
+
         }
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAuthor(int id)
@@ -50,6 +62,46 @@ namespace blog.webapi.Controllers
             }
             await _authorManager.DeleteAsync(author);
             return NoContent();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> AuthorGetById(int id)
+        {
+
+            var author = await _authorManager.GetByIdAsync(id);
+            if (author == null)
+            {
+                return BadRequest();
+            }
+            else
+            {
+                var apiauthor = new ApiAuthorModel()
+                {
+                    AuthorId = author.AuthorId,
+                    AuthorName = author.AutorName,
+                    Mail = author.Mail,
+                    Password = author.Password
+                };
+
+                return Ok(apiauthor);
+            }
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateAuthor(int id, ApiAuthorModel model)
+        {
+            var author = await _authorManager.GetByIdAsync(id);
+            if (author == null)
+            {
+                return BadRequest();
+            }
+            else
+            {
+                author.AutorName = model.AuthorName;
+                author.Mail = model.Mail;
+                Console.WriteLine(author.Mail);
+                await _authorManager.UpdateAuthorAsync(author);
+                return Ok();
+            }
         }
     }
 }

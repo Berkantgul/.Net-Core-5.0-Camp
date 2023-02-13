@@ -47,6 +47,11 @@ namespace blog.data.Concrete
             return context.Set<TEntity>().Find(id);
         }
 
+        public async Task<TEntity> GetByIdAsync(int id)
+        {
+            return await context.Set<TEntity>().FindAsync(id);
+        }
+
         public void Insert(TEntity entity)
         {
             context.Set<TEntity>().Add(entity);
@@ -63,6 +68,12 @@ namespace blog.data.Concrete
         {
             context.Set<TEntity>().Update(entity);
             context.SaveChanges();
+        }
+
+        public async Task UpdateAsync(TEntity entity)
+        {
+            context.Set<TEntity>().Update(entity);
+            await context.SaveChangesAsync();
         }
     }
 }

@@ -1,0 +1,28 @@
+﻿@model blog.webui.Areas.Admin.Models.ApiAuthorModel
+@{
+    ViewData["Title"] = "ApiUpdateAuthor";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-12">
+    <form class="forms-sample" asp-controller="Writer" asp-area="Admin" asp-action="ApiUpdateAuthor" method="post">
+        <div class="form-group">
+            <label for="exampleInputName1">Id</label>
+            <input class="form-control" id="exampleInputName1" asp-for="AuthorId">
+            <span class="text-danger" asp-validation-for="AuthorId"></span>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputName1">Adınız</label>
+            <input class="form-control" id="exampleInputName1" asp-for="AuthorName">
+            <span class="text-danger" asp-validation-for="AuthorName"></span>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail3">Email</label>
+            <input class="form-control" id="exampleInputEmail3" asp-for="Mail">
+            <span class="text-danger" asp-validation-for="Mail"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success btn-rounded">Ekle</button>
+    </form>
+</div>
+

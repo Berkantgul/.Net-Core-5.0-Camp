@@ -10,12 +10,13 @@ namespace blog.data.Abstract
     {
         List<T> GetAll();
         void Update(T entity);
+        Task UpdateAsync(T entity); 
         void Delete(T entity);
         Task DeleteAsync(T entity);
         void Insert(T entity);
         Task InsertAsync(T entity);
         T GetById(int id);
-
+        Task<T> GetByIdAsync(int id);
         List<T> GetAll(Expression<Func<T, bool>> filter);
         Task<List<T>> ApiGetAll();
 

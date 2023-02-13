@@ -1,4 +1,4 @@
-﻿@model List<Author>
+﻿@model List<blog.webui.Areas.Admin.Models.ApiAuthorModel>
 @{
     ViewData["Title"] = "ApiAuthorList";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -17,9 +17,9 @@
         {
             <tr>
                 <td>@item.AuthorId</td>
-                <td>@item.AutorName</td>
-                <td><a href="#" class="btn btn-warning btn-sm">Düzenle</a></td>
-                <td><a href="#" class="btn btn-danger btn-sm">Sil</a></td>
+                <td>@item.AuthorName</td>
+                <td><a href="/Admin/Writer/ApiUpdateAuthor/@item.AuthorId" class="btn btn-warning btn-sm">Düzenle</a></td>
+                <td><a href="/Admin/Writer/ApiDeleteAuthor/@item.AuthorId" class="btn btn-danger btn-sm">Sil</a></td>
             </tr>
         }
     </table>

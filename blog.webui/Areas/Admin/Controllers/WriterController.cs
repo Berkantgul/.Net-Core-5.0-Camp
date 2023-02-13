@@ -42,7 +42,7 @@ namespace blog.webui.Areas.Admin.Controllers
         public IActionResult AddAuthor(AuthorModel model)
         {
 
-            Author entity = new Author();
+            entity.Concrete.Author entity = new entity.Concrete.Author();
             if (model != null)
             {
                 entity.AutorName = model.AuthorName;
@@ -77,12 +77,13 @@ namespace blog.webui.Areas.Admin.Controllers
             }
             return authorModels;
         }
+        [AllowAnonymous]
         public async Task<IActionResult> ApiAuthorList()
         {
             var httpClient = new HttpClient();
             var responseMessage = await httpClient.GetAsync("https://localhost:5001/api/author");
             var jsonString = await responseMessage.Content.ReadAsStringAsync();
-            var values = JsonConvert.DeserializeObject<List<Author>>(jsonString);
+            var values = JsonConvert.DeserializeObject<List<ApiAuthorModel>>(jsonString);
             return View(values);
         }
 
@@ -94,21 +95,68 @@ namespace blog.webui.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> ApiAddAuthor(ApiAuthorModel model)
         {
-            if (ModelState.IsValid)
-            {
+            
                 var httpClient = new HttpClient();
                 var jsonAuthor = JsonConvert.SerializeObject(model);
-                StringContent content = new StringContent(jsonAuthor, Encoding.UTF8, "application/json");
+                var content = new StringContent(jsonAuthor, Encoding.UTF8, "application/json");
                 var responseMessage = await httpClient.PostAsync("https://localhost:5001/api/author", content);
-                if(responseMessage.IsSuccessStatusCode)
+                if (responseMessage.IsSuccessStatusCode)
                 {
                     return RedirectToAction("ApiAuthorList");
                 }
-            }
+            
 
             return View(model);
+        }
+        [HttpGet]
+        public async Task<IActionResult> ApiUpdateAuthor(int id)
+        {
+            var httpClient = new HttpClient();
+            var responseMessage = await httpClient.GetAsync("https://localhost:5001/api/author/" + id);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonAuthor = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<ApiAuthorModel>(jsonAuthor);
+
+                return View(values);
+            }
+            Console.WriteLine(responseMessage.RequestMessage.ToString());
+            return RedirectToAction("ApiAuthorList");
+
+        }
+        [HttpPost]
+        public async Task<IActionResult> ApiUpdateAuthor(ApiAuthorModel model)
+        {
+            var httpClient = new HttpClient();
+            var jsonAuthor = JsonConvert.SerializeObject(model);
+            var content = new StringContent(jsonAuthor, Encoding.UTF8, "application/json");
+            var responseMessage = await httpClient.PutAsync("https://localhost:5001/api/author/", content);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("ApiAuthorList");
+            }
+            Console.WriteLine(responseMessage.StatusCode);
+            return View(model);
+        }
+        [HttpGet]
+        public async Task<IActionResult> ApiDeleteAuthor(int id)
+        {
+            var httpClient = new HttpClient();
+            var responseMessage = await httpClient.DeleteAsync("https://localhost:5001/api/author/" + id);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("ApiAuthorList");
+            }
+            return View();
         }
 
 
     }
 }
+
+
+
+
+
+
+

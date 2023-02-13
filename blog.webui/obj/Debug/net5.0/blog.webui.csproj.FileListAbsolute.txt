@@ -207,4 +207,5 @@ D:\CoreBlog\blog.webui\obj\Debug\net5.0\ref\blog.webui.dll
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Areas\Admin\Views\Writer\Index.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Areas\Admin\Views\Writer\ApiAuthorList.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Areas\Admin\Views\Writer\ApiAddAuthor.cshtml.g.cs
+D:\CoreBlog\blog.webui\obj\Debug\net5.0\Razor\Areas\Admin\Views\Writer\ApiUpdateAuthor.cshtml.g.cs
 D:\CoreBlog\blog.webui\obj\Debug\net5.0\refint\blog.webui.dll

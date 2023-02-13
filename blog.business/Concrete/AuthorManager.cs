@@ -62,5 +62,17 @@ namespace blog.business.Concrete
         {
             await _authorRepository.InsertAsync(entity);
         }
+
+        
+
+        public async Task<Author> GetByIdAsync(int id)
+        {
+            return await _authorRepository.GetByIdAsync(id);
+        }
+
+        public async Task UpdateAuthorAsync(Author entity)
+        {
+            await _authorRepository.UpdateAsync(entity);
+        }
     }
 }

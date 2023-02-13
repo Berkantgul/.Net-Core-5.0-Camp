@@ -8,6 +8,7 @@ namespace blog.webui.Areas.Admin.Models
 {
     public class ApiAuthorModel
     {
+        public int AuthorId { get; set; }
         [Required(ErrorMessage = "Ad alanı boş geçilemez!")]
         public string AuthorName { get; set; }
         [Required(ErrorMessage = "Mail alanı gereklidir!")]
